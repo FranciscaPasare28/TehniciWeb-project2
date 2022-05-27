@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" href="main.css">
+    <title>Create</title>
+</head>
+<body>
+    <form action="http://localhost:3000/create" method="post">
+        <label for="nume">Name</label>
+        <br>
+        <input type="text" id="nume" name="nume">
+        <br>
+        <label for="price">Price</label>
+        <br>
+        <input type="text" id="price" name="price">
+        <br>
+        <label for="disponibilitate">Availability</label>
+        <br>
+        <input type="text" id="disponibilitate" name="disponibilitate">
+        <br>
+        <input type="Submit" id="backread">
+        <br>
+        <br>
+
+    </form>
+    
+    <div ><%-include("button")%></div>
+
+<script src="read.js"></script>
+</body>
+</html>

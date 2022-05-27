@@ -1,0 +1,1 @@
+{"Ticket Berlin-Germania":350,"Ticket Londra-Anglia":400,"Ticket Paris-Franta":600,"Ticket Las Vegas-America":600,"Ticket Subianco-Australia":500,"Ticket Los Angeles-America":800,"prices":[600,600,500,900]}

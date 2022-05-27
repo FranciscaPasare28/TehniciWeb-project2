@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' type="text/css" href="main.css">
+    <title>Tickets</title>
+</head>
+<body>
+    <div id="container">
+        <p>Light/Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" onclick="changeMode()">
+          <span class="slider"></span>
+        </label>
+      </div>
+    <h2 id="insist"></h2>
+    <h2>To buy a ticket we need some information:</h2>
+    <div id="getData">
+        <label for="inputCity">City:</label>
+            <input type="text" class="inputV" name="city" id="inputCity">
+        <label for="inputDate">Date:</label>
+            <input type="text" class="inputV" name="date" id="inputDate">
+        <label for="inputEmail">Email:</label>
+            <input type="text" class="inputV" name="email" id="inputEmail">
+        <p>Where would you like to be?</p>
+        <div>
+            <label for="checkFirst">
+            <input type="radio" class="inputCheck" id="checkFirst" value="First Mezzanine">
+            First Mezzanine</label>
+            <label for="checkFront">
+            <input type="radio" class="inputCheck" id="checkFront" value="Front Orchestra">
+            Front Orchestra</label>
+            <label for="checkRear">
+            <input type="radio" class="inputCheck" id="checkRear" value="Rear Orchestra">
+            Rear Orchestra</label>
+            <label for="checkSecond">
+            <input type="radio" class="inputCheck" id="checkSecond" value="Second Mezzanine">
+            Second Mezzanine</label>
+        </div>
+        <p>How many people would you like to spend with?</p>
+        <div>
+            <label for="check120">
+                <input type="radio" class="inputCheck1" id="check120" value="120-200">
+                120-200 people
+            </label>
+            <label for="check200">
+                <input type="radio" class="inputCheck1" id="check200" value="200-250">
+                200-250 people
+            </label>
+            <label>
+                <input type="radio" class="inputCheck1" id="check300" value="300+">
+                300+ people
+            </label>
+        </div>
+        <label for="inputFirstName">First name:</label>
+        <input type="text" class="inputV" name="firstName" id="inputFirstName">
+        <label for="inputLastName">Last name:</label>
+        <input type="text" class="inputV" name="lastName" id="inputLastName">
+        <button onclick="getPersonalData()" id="Submit">Submit</button>
+    </div>
+    <div id="outForm"></div>
+    <h3>Concerts 2022: </h3>
+    <div>
+        <div>
+            <div class="inline">
+                <h4 class="Options1">Concert Londra-Anglia.</h4>
+            </div>
+            <div class="inline group1">
+                <button onclick="modifyArray(this,0,0)" id="sth">-</button>
+                <button onclick="modifyArray(this,0,1)">+</button>
+            </div>
+        </div>
+        <div>
+            <div class="inline">
+                <h4 class="Options1">Concert Las Vegas-America.</h4>
+            </div>
+            <div class="inline group1">
+                <button onclick="modifyArray(this,1,0)">-</button>
+                <button onclick="modifyArray(this,1,1)">+</button>
+            </div>
+        </div>
+        <div>
+            <div class="inline">
+                <h4 class="Options1">Concert Subianco-Australia.</h4>
+            </div>
+            <div class="inline group1">
+                <button onclick="modifyArray(this,2,0)">-</button>
+                <button onclick="modifyArray(this,2,1)">+</button>
+            </div>
+        </div>
+    </div>
+    <h4>The products in your cart are:</h4>
+    <div id="output1"></div>
+    <p>If you have changed your mind, you can remove the last item added to the cart.</p>
+    <button onclick="popArray(1)">Remove.</button>
+
+    <h3>Concerts 2023: </h3>
+    <div>
+        <div>
+            <div class="inline">
+                <h4 class="Options2">Concert Los Angeles-America.</h4>
+            </div>
+            <div class="inline group2">
+                <button onclick="modifyArray(this,0,0)">-</button>
+                <button onclick="modifyArray(this,0,1)">+</button>
+            </div>
+        </div>
+        <div>
+            <div class="inline">
+                <h4 class="Options2">Concert Berlin-Germania.</h4>
+            </div>
+            <div class="inline group2">
+                <button onclick="modifyArray(this,1,0)">-</button>
+                <button onclick="modifyArray(this,1,1)">+</button>
+            </div>
+        </div>
+        <div>
+            <div class="inline">
+                <h4 class="Options2">Concert Paris-Franta.</h4>
+            </div>
+            <div class="inline group2">
+                <button onclick="modifyArray(this,2,0)">-</button>
+                <button onclick="modifyArray(this,2,1)">+</button>
+            </div>
+        </div>
+    </div>
+    <h4>The products in your cart are:</h4>
+    <div id="output2"></div>
+    <p>If you have changed your mind, you can remove the last item added to the cart.</p>
+    <button onclick="popArray(2)">Remove.</button>
+    <p>If you are European you can see the list of concerts in Europe with a single click.</p>
+    <button onclick="TariEuropa()">View</button>
+    <div id="europa"></div>
+    <p>Click to see all the selected tickets from the two years.</p>
+
+    <div id="output4"></div>
+    <div id="output3"></div>
+
+<p>Even if you had this option and above we want to remind you that you have added the following tickets to the cart. (We want to make sure everything is fine):</p>
+<div id="set"></div>
+<button onclick="ClearElements()">Clear</button>
+<br>
+<p>If you  change your mind and want to remove the last ticket, you can do that &#128549...</p>
+<button onclick="RemoveElement()">Remove</button>
+<p>Yes, was a lie &#128520</p>
+<div id="rcl"></div>
+<p>For more information about tickets click "Here":</p>
+<button onclick="Bilete1('ajax')">Here</button>
+<br>
+<p>Let's play. Click "Start":</p>
+<button onclick="Bilete1('read')">Start</button>
+<p>For your patience we will tell you a secret. Press key "End".</p>
+<p id="inside"></p>
+<p id="culoarea"></p>
+<script src="main.js"></script>
+</body>
+</html>

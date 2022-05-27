@@ -1,0 +1,96 @@
+.inline{
+    display: inline-block;
+}
+h4{
+    margin-right: 4px;
+}
+
+#output1{
+    height: 70px;
+}
+
+#output2{
+    height: 70px;
+}
+
+#output3{
+    height: 90px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#output4{
+    height: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+body{
+    background: #f7f0e9;
+    transition: .6s;
+  }
+
+h1{
+    font-size: 5em;
+    color: #3d3935;
+  }
+
+#container{
+    display: flex;
+    flex-direction: column;
+  }
+
+.switch{
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+ 
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #ccc;
+    border-radius: 34px;
+    transition: .4s;
+}
+ 
+  .dark-mode {
+      color: #f7f0e9;
+    background: #0b0a14;
+  }
+  .dark-mode h1 {
+    color: #f7f0e9;
+  }
+
+  #getData{
+      display:flex;
+      flex-direction: column;
+  }
+
+  #getData input:not(.inputCheck,.inputCheck1){
+      width: 200px;
+      margin-bottom: 10px;
+  }
+
+  #getData label{
+      display:block;
+      margin-bottom: 10px;
+  }
+
+  #Submit{
+      width: 100px;
+  }
+  p{
+      margin-top:10px;
+      margin-bottom: 10px;
+  }
